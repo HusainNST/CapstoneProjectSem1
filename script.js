@@ -14,3 +14,16 @@ function type() {
 
 type();
 
+// Pausing the scroll effect with manual intervension
+const mainDiv = document.querySelector('.feedback .mainDiv');
+const outerDiv = document.querySelector('.feedback .outerDiv');
+
+mainDiv.addEventListener('scroll', () => {
+  outerDiv.style.animationPlayState = 'paused';
+  
+  clearTimeout(mainDiv.resumeScroll);
+  mainDiv.resumeScroll = setTimeout(() => {
+    outerDiv.style.animationPlayState = 'running';
+  }, 2000);
+});
+

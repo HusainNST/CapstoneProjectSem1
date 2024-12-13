@@ -165,7 +165,7 @@ header h1 {
   font-weight: 600;
   line-height: 24px;
   text-align: left;
-  border-radius: 14px;
+  border-radius: 8px;
 }
 .art .girl {
   display: flex;
@@ -244,6 +244,7 @@ header h1 {
 .mainDiv .outerDiv {
   display: flex;
   align-items: flex-start;
+  animation: infiniteScroll 60s linear infinite;
 }
 .outerDiv .card {
   border: 1.5px solid #d6d6d6;
@@ -251,9 +252,6 @@ header h1 {
   padding: 24px;
   transition: 0.4s ease;
   margin-left: 24px;
-}
-.card:hover {
-  transform: scale(1.1);
 }
 .card p {
   width: 180px;
@@ -390,15 +388,31 @@ button:hover {
   transform: scale(1.1);
 }
 
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 footer button:hover {
   background: #555555;
   color: white;
   border: 1.5px solid #555555;
 }
 
+.contact button:hover,
+.art button:hover {
+  transform: translateY(-5px);
+  background: #910c0c;
+}
+
 .contact input:hover,
 .contact textarea:hover {
   border: 1.5px solid #afafb2;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border: 1.5px solid #5a5a5c;
 }
 
 /* Keyframes */
@@ -420,6 +434,14 @@ footer button:hover {
   100% {
     opacity: 100%;
     transform: translateY(0);
+  }
+}
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
   }
 }
 
@@ -510,7 +532,6 @@ footer button:hover {
   .art button {
     transition: 0.4s ease;
     font-size: 14px;
-    border-radius: 8px;
     padding: 8px 16px;
   }
   .about {
