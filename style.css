@@ -244,7 +244,6 @@ header h1 {
 .mainDiv .outerDiv {
   display: flex;
   align-items: flex-start;
-  animation: infiniteScroll 60s linear infinite;
 }
 .outerDiv .card {
   border: 1.5px solid #d6d6d6;
@@ -379,6 +378,7 @@ footer button {
 a:hover {
   text-decoration: underline;
   transform: scale(1.075);
+  cursor: pointer;
 }
 button:hover {
   cursor: pointer;
@@ -409,7 +409,6 @@ footer button:hover {
 .contact textarea:hover {
   border: 1.5px solid #afafb2;
 }
-
 .contact input:focus,
 .contact textarea:focus {
   border: 1.5px solid #5a5a5c;
@@ -434,14 +433,6 @@ footer button:hover {
   100% {
     opacity: 100%;
     transform: translateY(0);
-  }
-}
-@keyframes infiniteScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% / 2));
   }
 }
 
