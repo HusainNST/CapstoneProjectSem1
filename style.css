@@ -630,6 +630,7 @@ footer button:hover {
     font-size: 12px;
     line-height: 14px;
     padding: 10px 18px;
+    text-align: center;
   }
   .contact div {
     width: 85%;
