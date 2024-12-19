@@ -405,6 +405,7 @@ footer button:hover {
 .art button:hover {
   transform: translateY(-5px);
   background: #910c0c;
+  box-shadow: 0px 0px 14px 0px rgba(255, 176, 176, 1);
 }
 
 .contact input:hover,
@@ -542,8 +543,7 @@ footer button:hover {
     padding-right: 36px;
   }
   .feedback {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 48px 36px;
   }
   .feedback h1 {
     font-size: 36px;
@@ -582,17 +582,21 @@ footer button:hover {
   }
   .pageLinks {
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
   }
   header {
-    padding: 64px 36px 48px 36px;
+    padding: 36px 24px 48px 24px;
   }
   header h1 {
     font-size: 48px;
     line-height: 48px;
     margin-bottom: 24px;
   }
+  header img {
+    border-radius: 4px;
+  }
   .projects {
+    padding: 0 24px 24px;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
   }
@@ -600,10 +604,14 @@ footer button:hover {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 24px;
   }
   .details h2 {
     font-size: 36px;
     line-height: 40px;
+  }
+  .art {
+    padding: 0 24px;
   }
   .art h2 {
     font-size: 36px;
@@ -612,15 +620,25 @@ footer button:hover {
   .art img {
     display: none;
   }
+  .about {
+    padding: 36px 24px 24px;
+  }
   .about h1 {
     font-size: 24px;
     line-height: 28px;
     width: 80%;
   }
   .services {
-    padding: 24px 36px;
+    padding: 24px;
+    gap: 24px;
     display: flex;
     flex-direction: column;
+  }
+  .feedback {
+    padding: 48px 24px;
+  }
+  footer {
+    padding: 48px 24px 24px;
   }
   footer h4 {
     font-size: 20px;
@@ -631,6 +649,9 @@ footer button:hover {
     line-height: 14px;
     padding: 10px 18px;
     text-align: center;
+  }
+  .contact {
+    padding: 36px 24px;
   }
   .contact div {
     width: 85%;
