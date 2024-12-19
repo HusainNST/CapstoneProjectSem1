@@ -237,18 +237,15 @@ header h1 {
 }
 .feedback .mainDiv {
   overflow: auto;
-  height: 235px;
   display: flex;
   align-items: center;
+  display: flex;
+  align-items: flex-start;
 }
 .mainDiv::-webkit-scrollbar {
   display: none;
 }
-.mainDiv .outerDiv {
-  display: flex;
-  align-items: flex-start;
-}
-.outerDiv .card {
+.mainDiv .card {
   border: 1.5px solid #d6d6d6;
   border-radius: 16px;
   padding: 24px;
@@ -387,11 +384,6 @@ button:hover {
 }
 
 .projects div:hover {
-  transform: scale(1.1);
-}
-
-.card:hover {
-  cursor: pointer;
   transform: scale(1.1);
 }
 
