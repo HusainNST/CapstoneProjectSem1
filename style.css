@@ -241,6 +241,14 @@ header h1 {
   align-items: center;
   display: flex;
   align-items: flex-start;
+  gap: 24px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0)
+  );
 }
 .mainDiv::-webkit-scrollbar {
   display: none;
@@ -250,7 +258,6 @@ header h1 {
   border-radius: 16px;
   padding: 24px;
   transition: 0.4s ease;
-  margin-left: 24px;
 }
 .card p {
   width: 180px;
