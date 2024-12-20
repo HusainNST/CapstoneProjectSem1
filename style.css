@@ -220,6 +220,7 @@ header h1 {
   text-align: left;
   text-decoration: none;
   color: black;
+  transform-origin: left;
 }
 
 .feedback {
@@ -236,19 +237,18 @@ header h1 {
   margin-bottom: 48px;
 }
 .feedback .mainDiv {
-  overflow: auto;
   display: flex;
-  align-items: center;
-  display: flex;
-  align-items: flex-start;
   gap: 24px;
+  overflow-x: hidden;
+  position: relative;
   mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0)
   );
+  height: 218px;
 }
 .mainDiv::-webkit-scrollbar {
   display: none;
@@ -258,6 +258,31 @@ header h1 {
   border-radius: 16px;
   padding: 24px;
   transition: 0.4s ease;
+  position: absolute;
+  left: max(calc(312px * 6), 100%);
+  animation-name: autoScroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  width: 292px;
+}
+.mainDiv .card1 {
+  animation-delay: calc(30s / 6 * (6 - 1) * -1);
+}
+.mainDiv .card2 {
+  animation-delay: calc(30s / 6 * (6 - 2) * -1);
+}
+.mainDiv .card3 {
+  animation-delay: calc(30s / 6 * (6 - 3) * -1);
+}
+.mainDiv .card4 {
+  animation-delay: calc(30s / 6 * (6 - 4) * -1);
+}
+.mainDiv .card5 {
+  animation-delay: calc(30s / 6 * (6 - 5) * -1);
+}
+.mainDiv .card6 {
+  animation-delay: calc(30s / 6 * (6 - 6) * -1);
 }
 .card p {
   width: 180px;
@@ -435,6 +460,11 @@ footer button:hover {
   100% {
     opacity: 100%;
     transform: translateY(0);
+  }
+}
+@keyframes autoScroll {
+  to {
+    left: -308px;
   }
 }
 
@@ -635,6 +665,27 @@ footer button:hover {
   }
   .feedback {
     padding: 48px 24px;
+  }
+  .mainDiv .card {
+    animation-duration: 60s;
+  }
+  .mainDiv .card1 {
+    animation-delay: calc(60s / 6 * (6 - 1) * -1);
+  }
+  .mainDiv .card2 {
+    animation-delay: calc(60s / 6 * (6 - 2) * -1);
+  }
+  .mainDiv .card3 {
+    animation-delay: calc(60s / 6 * (6 - 3) * -1);
+  }
+  .mainDiv .card4 {
+    animation-delay: calc(60s / 6 * (6 - 4) * -1);
+  }
+  .mainDiv .card5 {
+    animation-delay: calc(60s / 6 * (6 - 5) * -1);
+  }
+  .mainDiv .card6 {
+    animation-delay: calc(60s / 6 * (6 - 6) * -1);
   }
   footer {
     padding: 48px 24px 24px;
